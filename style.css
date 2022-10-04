@@ -8,6 +8,10 @@ html {
   scroll-behavior: smooth;
 }
 
+main {
+  position: relative;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -86,8 +90,6 @@ html {
   color: #32b5eb;
   padding-bottom: 36px;
 
-  /* -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; */
 }
 
 .hero-title span {
@@ -95,34 +97,13 @@ html {
   color: #1c1c1c;
 }
 
-/* @-webkit-keyframes hero-title {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
-  }
-}
-@keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-50px);
-    transform: translateX(-50px);
-  }
-} */
-
 .story {
   display: flex;
   flex-direction: row;
   background-color: #eef7fb;
   justify-content: space-between;
   padding: 100px 98px;
-  height: 700px;
+  height: 100%;
 }
 
 .story-content {
@@ -456,6 +437,9 @@ textarea {
   border-radius: 8px;
   text-decoration: none;
   margin-left: 24px;
+  position: absolute;
+  bottom: 135px;
+  right: 50px;
 }
 
 .back-text {
@@ -463,4 +447,116 @@ textarea {
   font-family: "Inter Tight", sans-serif;
   font-size: 11px;
   font-weight: 600;
+}
+
+@media (max-width: 948px) { 
+  .story {
+    flex-direction: column;
+  }
+
+  .story-content {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  .story-video {
+    justify-content: center;
+  }
+
+  .help {
+    height: 100%;
+  }
+
+  .help-info, .help-list {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    margin-bottom: 38px;
+  }
+
+  .shop {
+    flex-direction: column-reverse;
+  }
+
+  .shop-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact {
+    flex-direction: column;
+    padding: 98px 40px;
+  }
+
+  .contact-content {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-text {
+    width: 400px;
+  }
+
+  .contact-form {
+    text-align: initial;
+    margin-bottom: 32px;
+  }
+
+  .footer {
+    padding: 0 32px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .footer-content {
+    margin-bottom: 12px;
+  }
+
+  .info-text {
+    font-size: 12px;
+  }
+
+  .header {
+    flex-direction: column; 
+    padding: 16px 42px;
+  }
+
+  .logo-header {
+    margin-bottom: 12px;
+  }
+
+  .item-list {
+    font-size: 14px;
+  }
+
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-content {
+    padding: 48px;
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: end;
+  }
+  
 }
